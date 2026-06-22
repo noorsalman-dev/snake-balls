@@ -1,2 +1,23 @@
 # snake-balls
-a snake that moves with balls i make it from simple parts instead of moving with slide or with four wheals i made it from cheap things so it use four balls and a mottor to make it cheaper and easier to move and it can know whats after it so it can stop or start if some thing ahead and it have leds to make you see in the dark
+This is a bio-inspired snake robot designed for the **Hack Club Stack** challenge.  while relying on a minimalist hardware and code setup.
+
+## How It Works (Mechanical + Code)
+- **One Motor, One Wheel Propulsion:** The robot is driven by exactly **one  TT DC motor connected to a drive wheel**. 
+
+- **Autonomous Start/Stop:** The code strictly handles obstacle avoidance. The Raspberry Pi Pico reads the distance from the front ultrasonic sensor:
+  - **PATH CLEAR:** Motor starts and drives forward.
+  - **OBSTACLE AHEAD (< 20cm):** Motor stops completely to prevent a collision.
+
+## Hardware Wiring Configuration
+To verify the electronics integration, the components are wired directly to the Raspberry Pi Pico as follows:
+
+| Component | Pico Pin | Function |
+| :--- | :--- | :--- |
+| **HC-SR04 Trigger** | GPIO 3 | Transmit Ultrasonic Pulse |
+| **HC-SR04 Echo** | GPIO 2 | Receive Echo Pulse |
+| **DRV8833 IN1** | GPIO 14 | Motor Drive Signal (Single Motor) |
+| **DRV8833 IN2** | GPIO 15 | Motor Ground/Direction (Single Motor) |
+
+## Project Structure
+  - i made the project on cad on shape i puted all the parts inside the main body because i want a beatiful shape
+  - i get and made hte code from some tutorials on youtube with a little help from the ai with movement
