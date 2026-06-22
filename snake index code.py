@@ -27,7 +27,7 @@ while True:
     dist = ultra()
     print("Distance:", dist)
     
-    if dist < 20.0:
+    if dist < 8.0:
         motor_in1.low()
         motor_in2.low()
     else:
